@@ -1,5 +1,32 @@
-<html>
-  <body>
-Test Html
-  </body>
-</html>  
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Merchant Page</title>
+<script src="https://uat2.enets.sg/GW2/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://uat2.enets.sg/GW2/js/apps.js"></script>
+&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+  pageEncoding="ISO-8859-1"%&gt;
+&lt;%@ page import="java.util.*,java.io.*"%&gt;
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ACS REDIRECT</title>
+<script>
+  function formsubmit() {
+    document.getElementById('acs_form').submit();
+  }
+</script>
+
+
+  &lt;%
+    System.out.println("in merchant sim, acs redirect");
+    Object eci = request.getAttribute("eci");
+    Object pareq = request.getAttribute("pareq");
+    Object termUrl = request.getAttribute("termUrl");
+    Object md = request.getAttribute("md");
+    Object acsUrl = request.getAttribute("acsUrl");
+    System.out.println("values received in jsp; eci:" + eci + ", pareq:" + pareq + ", termUrl:" + termUrl
+        + ", md:" + md + ", acsUrl:" + acsUrl);
+  %&gt;
+  Redirecting for 3D Authentication. Please wait.
+  <form id="acs_form" action="<%=acsUrl%>" method="POST">
+    <input type="hidden" name="PaReq" value="<%=pareq%>"> <input type="hidden" name="TermUrl" value="<%=termUrl%>"> <input type="hidden" name="MD" value="<%=md%>">
+  </form>
