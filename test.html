@@ -1,10 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Merchant Page</title>
 <script src="https://uat2.enets.sg/GW2/js/jquery-3.1.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://uat2.enets.sg/GW2/js/apps.js"></script>
-&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-  pageEncoding="ISO-8859-1"%&gt;
-&lt;%@ page import="java.util.*,java.io.*"%&gt;
+<script type="text/javascript" src="https://uat2.enets.sg/GW2/js/apps.js"></script
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -15,17 +12,6 @@
   }
 </script>
 
-
-  &lt;%
-    System.out.println("in merchant sim, acs redirect");
-    Object eci = request.getAttribute("eci");
-    Object pareq = request.getAttribute("pareq");
-    Object termUrl = request.getAttribute("termUrl");
-    Object md = request.getAttribute("md");
-    Object acsUrl = request.getAttribute("acsUrl");
-    System.out.println("values received in jsp; eci:" + eci + ", pareq:" + pareq + ", termUrl:" + termUrl
-        + ", md:" + md + ", acsUrl:" + acsUrl);
-  %&gt;
   Redirecting for 3D Authentication. Please wait.
   <form id="acs_form" action="https://aacsw.3ds.verifiedbyvisa.com/aacs/pahandler?vgtli=0019197003062247500332270375000000000000;vgp=eNpNjkELgjAcxe9%2BCtm95iqXwX8LJQpB7JIduq05Y2SbaYR%2B%2B6wV9G7vvR%2B8B%2Bv%2BVvtP1XbaGobINEC%2BMtKW2lwYKg7bSYT87iFMKWpr-FEOD6tCae3Dccc8fBULekzTni5BE8wXgr3XdTbXphtPlipCAUBp8BNjFDvlO83F5OgP8s65sWtsPPI5lEu9tWFKtcdXo4lxQOeTLUxMxwI5x%2FFVUV5FZKWrFd9k%2BiTPA%2F5kH%2BP37BQMGR4I%3D.7ED7AE51" method="POST">
     <input type="hidden" name="PaReq" value="eJxVUttuwjAM/RXEBzRJC+UiEylQtFUiiNsetreqtdYCLZCGcfn6JaUdLC/2ObF87JPAJlWIwRrjs0IOEssy+sZWlozaC7HCE/O7Xd/3OrTX95jX5lCxHH5Qldmh4MyhjgukgaaBitOo0Byi+DQO57zTZX2vA6SGkKMKA+73BoxR5vu0OkAeNBRRjny9+Zy5Dp2sgFQY4sO50OrGe9RINQDOas9TrY/lkBDm9swg1GHDPu1TIhfhLCs1FqicVOd7ILYYyHO6xdlmpWl+zRIuA3GRW3GTG3GX2+VVbuRF3qcmTkdAbAUkkUbuUpdRz+20GBt6dOgxIBUPUW6n4qzapQZwtBri9eaVAeO4wiJu1moQ4PV4KNBUGPYvhwTLmM8PrcBElR21cduIWxLIc5nJuzU+1sZLMd59xUK+hbtkKe5hIbwPUZ+RfY6qyIplxkx3wB5qFgCxbUj90qT+Eyb791d+AceeuFA="> 
